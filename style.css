@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+    margin-top: 21px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "b1 b1 b1"
+        "b2 b3 b4"
+        "b5 b3 b4"
+        "b6 b6 b4";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.block {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.block1 {
+    grid-area: b1;
+    background: #bcd3f0;
+    position: relative;
+}
+
+.block2 {
+    grid-area: b2;
+    background: #f8dfcf;
+}
+
+.block3 {
+    grid-area: b3;
+    background: white;
+}
+
+.block4 {
+    grid-area: b4;
+    background: #f8dfcf;
+}
+
+.block5 {
+    grid-area: b5;
+    background: #e0eed4;
+}
+
+.block6 {
+    grid-area: b6;
+    background: #bcd3f0;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.x-box {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: white;
+    border: 1px solid black;
+    padding: 5px 15px;
+    width: fit-content;
+}
+
+.y-box {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    background: white;
+    border: 1px solid black;
+    padding: 5px 15px;
+    width: fit-content;
+}
+
+.edit-form {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #333;
+    padding: 10px;
+    z-index: 10;
+}
+
+.time-info {
+    margin-top: 20px;
+    padding: 10px;
+    background: #eef;
+    border: 1px solid #99f;
+}
+
+.acc-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.acc-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.acc-item:last-child {
+    border-bottom: none;
+}
+
+.acc-btn {
+    width: 100%;
+    text-align: left;
+    background: #eee;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.acc-btn:hover {
+    background: #ddd;
+}
+
+.acc-btn.active {
+    background: #ccc;
+}
+
+.acc-btn:after {
+    content: '+';
+    float: right;
+    font-weight: bold;
+}
+
+.acc-btn.active:after {
+    content: '-';
+}
+
+.acc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: white;
+    padding: 0 15px;
+}
+
+.editor-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.editor-item input,
+.editor-item textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-add {
+    background: #007bff;
+}
+
+.btn-save {
+    background: #28a745;
+}
+
+.btn-del {
+    background: #dc3545;
+    font-size: 12px;
+    padding: 4px 8px;
+}
