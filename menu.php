@@ -7,6 +7,7 @@ $menu = [
     "page5.php" => "Сторінка 5",
     "page_accordion_edit.php" => "Сторінка 1 (лаб4)",
     "page_accordion_view.php" => "Сторінка 2 (лаб4)",
+    "lab5_1.php" => "Сторінка 1 (лаб5)",
 ];
 ?>
 
